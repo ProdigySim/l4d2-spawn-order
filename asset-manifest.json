@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/l4d2-spawn-order/static/css/main.18a113ca.chunk.css",
-    "main.js": "/l4d2-spawn-order/static/js/main.8e12a1eb.chunk.js",
-    "main.js.map": "/l4d2-spawn-order/static/js/main.8e12a1eb.chunk.js.map",
+    "main.js": "/l4d2-spawn-order/static/js/main.5fb73a19.chunk.js",
+    "main.js.map": "/l4d2-spawn-order/static/js/main.5fb73a19.chunk.js.map",
     "runtime-main.js": "/l4d2-spawn-order/static/js/runtime-main.63304983.js",
     "runtime-main.js.map": "/l4d2-spawn-order/static/js/runtime-main.63304983.js.map",
-    "static/js/2.a659fd2c.chunk.js": "/l4d2-spawn-order/static/js/2.a659fd2c.chunk.js",
-    "static/js/2.a659fd2c.chunk.js.map": "/l4d2-spawn-order/static/js/2.a659fd2c.chunk.js.map",
+    "static/js/2.60982609.chunk.js": "/l4d2-spawn-order/static/js/2.60982609.chunk.js",
+    "static/js/2.60982609.chunk.js.map": "/l4d2-spawn-order/static/js/2.60982609.chunk.js.map",
     "static/js/3.a064880f.chunk.js": "/l4d2-spawn-order/static/js/3.a064880f.chunk.js",
     "static/js/3.a064880f.chunk.js.map": "/l4d2-spawn-order/static/js/3.a064880f.chunk.js.map",
     "index.html": "/l4d2-spawn-order/index.html",
     "static/css/main.18a113ca.chunk.css.map": "/l4d2-spawn-order/static/css/main.18a113ca.chunk.css.map",
-    "static/js/2.a659fd2c.chunk.js.LICENSE.txt": "/l4d2-spawn-order/static/js/2.a659fd2c.chunk.js.LICENSE.txt",
+    "static/js/2.60982609.chunk.js.LICENSE.txt": "/l4d2-spawn-order/static/js/2.60982609.chunk.js.LICENSE.txt",
     "static/media/zombieteamimage_boomer.d1003000.png": "/l4d2-spawn-order/static/media/zombieteamimage_boomer.d1003000.png",
     "static/media/zombieteamimage_hunter.28341d56.png": "/l4d2-spawn-order/static/media/zombieteamimage_hunter.28341d56.png",
     "static/media/zombieteamimage_jockey.32453ddf.png": "/l4d2-spawn-order/static/media/zombieteamimage_jockey.32453ddf.png",
@@ -20,8 +20,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.63304983.js",
-    "static/js/2.a659fd2c.chunk.js",
+    "static/js/2.60982609.chunk.js",
     "static/css/main.18a113ca.chunk.css",
-    "static/js/main.8e12a1eb.chunk.js"
+    "static/js/main.5fb73a19.chunk.js"
   ]
 }
