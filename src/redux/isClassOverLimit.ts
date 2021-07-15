@@ -11,7 +11,6 @@ export default function isClassOverLimit(players: readonly PlayerState[], siClas
 
   // Count SI classes of all alive & ghost infected
   const classCounts = players
-    .filter(p => p.spawnState !== 'dead')
     .reduce<Record<SIClass, number>>((acc, next) => {
       if(next.siClass > SIClass.Common && next.siClass < SIClass.Witch) {
         ++acc[next.siClass]

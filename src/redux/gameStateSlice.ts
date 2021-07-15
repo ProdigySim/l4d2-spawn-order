@@ -60,7 +60,7 @@ const slice = createSlice({
       const player = state.playersById[action.payload];
       assertDefined(player, `Couldn't find player ${action.payload} to spawn.`);
       ++state.curTime
-      player.siClass = SIClass.Common;
+      // SI Class stays the same while dead
       player.spawnState = 'dead';
     }
   }
