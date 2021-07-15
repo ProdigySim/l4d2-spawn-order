@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/l4d2-spawn-order/static/css/main.8c8b27cf.chunk.css",
+    "main.js": "/l4d2-spawn-order/static/js/main.5fadf5fa.chunk.js",
+    "main.js.map": "/l4d2-spawn-order/static/js/main.5fadf5fa.chunk.js.map",
+    "runtime-main.js": "/l4d2-spawn-order/static/js/runtime-main.8f5fe604.js",
+    "runtime-main.js.map": "/l4d2-spawn-order/static/js/runtime-main.8f5fe604.js.map",
+    "static/js/2.0aae33a9.chunk.js": "/l4d2-spawn-order/static/js/2.0aae33a9.chunk.js",
+    "static/js/2.0aae33a9.chunk.js.map": "/l4d2-spawn-order/static/js/2.0aae33a9.chunk.js.map",
+    "static/js/3.cbc23222.chunk.js": "/l4d2-spawn-order/static/js/3.cbc23222.chunk.js",
+    "static/js/3.cbc23222.chunk.js.map": "/l4d2-spawn-order/static/js/3.cbc23222.chunk.js.map",
+    "index.html": "/l4d2-spawn-order/index.html",
+    "static/css/main.8c8b27cf.chunk.css.map": "/l4d2-spawn-order/static/css/main.8c8b27cf.chunk.css.map",
+    "static/js/2.0aae33a9.chunk.js.LICENSE.txt": "/l4d2-spawn-order/static/js/2.0aae33a9.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.8f5fe604.js",
+    "static/js/2.0aae33a9.chunk.js",
+    "static/css/main.8c8b27cf.chunk.css",
+    "static/js/main.5fadf5fa.chunk.js"
+  ]
+}
