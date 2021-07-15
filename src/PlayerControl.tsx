@@ -16,7 +16,7 @@ export default function PlayerControl({ player }: { player: PlayerState}) {
   return <div>
     { 
       player.spawnState === 'dead'
-      ? (<span>{ player.name } is Dead. Their next spawn will be: {prettySIName(nextSpawn)}</span>)
+      ? (<span>{ player.name } is Dead. Their last spawn was: {prettySIName(player.siClass)}</span>)
       : (<span>{ player.name } is spawned as a {prettySIName(player.siClass)}.</span>)
     }
     { ' ' }
