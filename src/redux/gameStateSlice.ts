@@ -15,7 +15,7 @@ function consumeRandomItem<T>(arr:T[]): T | undefined {
     return arr.pop();
   }
   const targetIdx = Math.floor(Math.random() * arr.length);
-  return arr.splice(targetIdx)[0];
+  return arr.splice(targetIdx, 1)[0];
 }
 const slice = createSlice({
   name: 'GameState',
