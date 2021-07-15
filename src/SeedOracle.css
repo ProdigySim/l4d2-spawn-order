@@ -1,0 +1,25 @@
+.seed-oracle-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.seed-oracle-container > div {
+  margin: 8px 8px;
+  padding: 8px;
+  border: 1px dashed aliceblue;
+}
+
+.seed-oracle-container ol {
+  list-style: none;
+  padding-left: 0;
+}
+
+.seed-oracle-container .seed-segment {
+  display: flex;
+  align-items: center;
+  margin-bottom:8px;
+}
+
+.seed-oracle-container .seed-segment > span:first-child {
+  margin-right: 8px;
+}

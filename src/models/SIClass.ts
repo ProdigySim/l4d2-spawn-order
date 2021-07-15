@@ -14,6 +14,10 @@ export function getSIName(siClass: SIClass): string {
   return SIClass[siClass];
 }
 
+export function prettySIName(siClass: SIClass): string {
+  return `${getSIName(siClass)} (${siClass})`;
+}
+
 export function isDominator(siClass: SIClass): boolean {
   switch(siClass) {
     case SIClass.Smoker:

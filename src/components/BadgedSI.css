@@ -1,0 +1,13 @@
+.badged-si-name {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 112px;
+}
+.si-badge-image {
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+  border: 1px solid red;
+  border-radius: 500em;
+}

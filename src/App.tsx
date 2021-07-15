@@ -5,6 +5,7 @@ import { GameState, gameStateActions } from './redux/gameStateSlice';
 import getPlayers from './redux/getPlayers';
 import { getSIName } from './models/SIClass';
 import PlayerControl from './PlayerControl';
+import SeedOracle from './SeedOracle';
 
 function App() {
   const seed = useSelector((state: GameState) => state.spawnSeed);
@@ -15,6 +16,10 @@ function App() {
   }, [dispatch])
   return (
     <div className="App">
+      <div>
+        <h1>Spawn Seed Oracle</h1>
+        <SeedOracle/>
+      </div>
       <div>
         <h1>Spawn Simulator</h1>
       </div>

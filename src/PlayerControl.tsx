@@ -1,5 +1,5 @@
 import { useDispatch, useSelector } from "react-redux";
-import { getSIName } from "./models/SIClass";
+import { prettySIName } from "./models/SIClass";
 import { gameStateActions } from "./redux/gameStateSlice";
 import getNextSpawns from "./redux/getNextSpawns";
 import { PlayerState } from "./redux/playerState";
@@ -16,8 +16,8 @@ export default function PlayerControl({ player }: { player: PlayerState}) {
   return <div>
     { 
       player.spawnState === 'dead'
-      ? (<span>{ player.name } is Dead. Their next spawn will be: {getSIName(nextSpawn)} ({nextSpawn})</span>)
-      : (<span>{ player.name } is spawned as a {getSIName(player.siClass)} ({player.siClass}).</span>)
+      ? (<span>{ player.name } is Dead. Their next spawn will be: {prettySIName(nextSpawn)}</span>)
+      : (<span>{ player.name } is spawned as a {prettySIName(player.siClass)}.</span>)
     }
     { ' ' }
     <button 
