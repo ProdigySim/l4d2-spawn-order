@@ -25,8 +25,8 @@ function App() {
       </div>
       <div>
         <p>Current spawn seed is: {getSIName(seed)} ({seed}).</p>
-        <button>New Game (new seed)</button>
-        <button>New Round (same seed)</button>
+        <button onClick={ () => dispatch(gameStateActions.newMap()) }>New Game (new seed)</button>
+        <button onClick={ () => dispatch(gameStateActions.newRound()) }>New Round (same seed)</button>
         {
           players.map((p) => (
             <PlayerControl key={p.id} player={p} />

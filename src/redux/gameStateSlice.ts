@@ -47,6 +47,9 @@ const slice = createSlice({
     rerollSpawnSeed(state) {
       state.spawnSeed = rndSeed();
     },
+    resetClock(state) {
+      state.curTime = 0;
+    },
     spawnPlayer(state, action: PayloadAction<number>) {
       const player = state.playersById[action.payload];
       assertDefined(player, `Couldn't find player ${action.payload} to spawn.`);
@@ -68,19 +71,40 @@ const slice = createSlice({
 
 export const reducer = slice.reducer;
 
+const populateGame = createAsyncThunk(
+  'gameState/addNewPlayerAndSpawn',
+  async (playerCount: number, { dispatch, getState }) => {
+    while(playerCount--) {
+      await dispatch(slice.actions.addPlayer());
+    }
+    const players = getPlayers(getState() as GameState);
+    for (const player of players) {
+      await dispatch(slice.actions.spawnPlayer(player.id));
+    }
+  });
 export const gameStateActions = {
   ...slice.actions,
-  populateGame: createAsyncThunk(
-    'gameState/addNewPlayerAndSpawn',
-    async (playerCount: number, { dispatch, getState }) => {
-      while(playerCount--) {
-        await dispatch(slice.actions.addPlayer());
+  populateGame,
+  newMap: createAsyncThunk(
+    'gameState/newMap',
+    async (_, { dispatch, getState }) => {
+      const playerCount = (getState() as GameState).orderedPlayers.length;
+      for (let i = 0; i < playerCount; i++) {
+        await dispatch(slice.actions.removePlayer());
       }
-      const players = getPlayers(getState() as GameState);
-      for (const player of players) {
-        await dispatch(slice.actions.spawnPlayer(player.id));
+      await dispatch(slice.actions.rerollSpawnSeed());
+      await dispatch(slice.actions.resetClock());
+      await dispatch(populateGame(playerCount));
+    }),
+  newRound: createAsyncThunk(
+    'gameState/newMap',
+    async (_, { dispatch, getState }) => {
+      const playerCount = (getState() as GameState).orderedPlayers.length;
+      for (let i = 0; i < playerCount; i++) {
+        await dispatch(slice.actions.removePlayer());
       }
-    })
+      await dispatch(populateGame(playerCount));
+    }),
 };
 
 
