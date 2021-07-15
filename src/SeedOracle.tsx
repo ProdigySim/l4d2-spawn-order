@@ -1,6 +1,6 @@
 import './SeedOracle.css';
 import { useSelector } from "react-redux";
-import { allStandardSIOrdered, prettySIName } from "./models/SIClass";
+import { allStandardSIOrdered } from "./models/SIClass";
 import { GameState } from "./redux/gameStateSlice";
 import { useMemo } from 'react';
 import BadgedSI from './components/BadgedSI';

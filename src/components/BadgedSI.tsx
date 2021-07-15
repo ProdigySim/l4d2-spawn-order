@@ -7,7 +7,7 @@ import spitterImg from '../images/zombieteamimage_spitter.png';
 import jockeyImg from '../images/zombieteamimage_jockey.png';
 import chargerImg from '../images/zombieteamimage_charger.png';
 
-import SIClass, { getSIName, prettySIName } from '../models/SIClass';
+import SIClass, { getSIName } from '../models/SIClass';
 
 const SIImages = {
   [SIClass.Smoker]: smokerImg,
