@@ -10,6 +10,8 @@ enum SIClass {
   Tank,
 };
 
+export type StandardSIClass = SIClass.Smoker | SIClass.Boomer | SIClass.Hunter | SIClass.Spitter | SIClass.Jockey | SIClass.Charger;
+
 export function getSIName(siClass: SIClass): string {
   return SIClass[siClass];
 }
@@ -47,7 +49,7 @@ export const allStandardSIOrdered = [
 export function rotateSIListTo(siClass: SIClass) {
   return [
     ...allStandardSIOrdered.slice(siClass-1),
-    ...allStandardSIOrdered.slice(0, siClass),
+    ...allStandardSIOrdered.slice(0, siClass-1),
   ];
 }
 export default SIClass;

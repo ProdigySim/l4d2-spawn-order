@@ -1,11 +1,11 @@
 import { createAsyncThunk, createSlice, PayloadAction, Slice } from "@reduxjs/toolkit";
-import SIClass from "../models/SIClass";
+import { StandardSIClass } from "../models/SIClass";
 import assertDefined from "../utils/assertDefined";
 import determineNextSpawn from "./determineNextSpawn";
 import getPlayers from "./getPlayers";
 import { PlayerNames, PlayerState, vendNewPlayer } from './playerState';
 
-function rndSeed(): SIClass {
+function rndSeed(): StandardSIClass {
   return Math.floor(Math.random() * 6) + 1;
 }
 function consumeRandomItem<T>(arr:T[]): T | undefined {

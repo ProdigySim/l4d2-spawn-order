@@ -1,0 +1,35 @@
+.player-control {
+  border: 1px dashed white;
+  padding: 8px;
+}
+.player-spawn-icons {
+  display: flex;
+  justify-content: center;
+}
+
+.player-spawn-icon {
+  border-radius: 500px;
+  display: inline-flex;
+  width: 26px;
+  flex-direction: column;
+}
+
+.player-spawn-icon img {
+  filter: brightness(2) saturate(0.1);
+}
+
+.player-spawn-icon.class-disabled img {
+  filter: brightness(0.8) saturate(0.1);
+}
+
+.player-spawn-icon.is-alive-as img {
+  filter: none;
+}
+
+.player-spawn-icon:not(.class-disabled):not(.is-alive-as) img {
+  box-shadow: 0 0 0px 1px gold inset;
+}
+
+.player-spawn-icon .status-icon {
+  display: block;
+}

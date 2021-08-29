@@ -1,0 +1,10 @@
+.seed-display-text {
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.player-controls {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}

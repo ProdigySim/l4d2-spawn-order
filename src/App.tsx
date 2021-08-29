@@ -1,15 +1,11 @@
 import React, { useEffect } from 'react';
 import './App.css';
-import { useDispatch, useSelector } from 'react-redux';
-import { GameState, gameStateActions } from './redux/gameStateSlice';
-import getPlayers from './redux/getPlayers';
-import { getSIName } from './models/SIClass';
-import PlayerControl from './PlayerControl';
+import { useDispatch } from 'react-redux';
+import { gameStateActions } from './redux/gameStateSlice';
 import SeedOracle from './SeedOracle';
+import GameControl from './components/GameControl';
 
 function App() {
-  const seed = useSelector((state: GameState) => state.spawnSeed);
-  const players = useSelector(getPlayers);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(gameStateActions.populateGame(4));
@@ -17,21 +13,19 @@ function App() {
   return (
     <div className="App">
       <div>
-        <h1>Spawn Seed Oracle</h1>
-        <SeedOracle/>
+        <h1>L4D2 Spawn Order Algorithm</h1>
+        <p>Each player's next SI Class is determined by the initial SI Class roster ("Spawn Seed"), and the list of SI classes they previously spawned as.
+          <br/>When a player's respawn timer hits 0 and they enter the ghost state, the game selects their next SI. The player will become SI class they have spawned as the least recently which does not violate any SI class limits or dominator limits. 
+          <br/>In case of a tie, the SI Class will be chosen based on order in the SI class list, starting from the Spawn Seed and counting upwards. 
+          <br/>A notable wrinkle here is that the class limits are checked against ghost/dead/alive players, whereas the dominator limit check only looks at ghost/alive players.</p>
       </div>
       <div>
         <h1>Spawn Simulator</h1>
+        <GameControl />
       </div>
       <div>
-        <p>Current spawn seed is: {getSIName(seed)} ({seed}).</p>
-        <button onClick={ () => dispatch(gameStateActions.newMap()) }>New Game (new seed)</button>
-        <button onClick={ () => dispatch(gameStateActions.newRound()) }>New Round (same seed)</button>
-        {
-          players.map((p) => (
-            <PlayerControl key={p.id} player={p} />
-          ))
-        }
+        <h1>Spawn Seed Oracle</h1>
+        <SeedOracle/>
       </div>
     </div>
   );

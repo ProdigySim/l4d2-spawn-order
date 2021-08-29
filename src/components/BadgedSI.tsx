@@ -1,5 +1,7 @@
 import './BadgedSI.css';
 
+import cx from 'classnames';
+
 import smokerImg from '../images/zombieteamimage_smoker.png';
 import boomerImg from '../images/zombieteamimage_boomer.png';
 import hunterImg from '../images/zombieteamimage_hunter.png';
@@ -21,9 +23,13 @@ const SIImages = {
 export default function BadgedSI({ siClass }: { siClass: keyof typeof SIImages }) {
   return (
     <span className='badged-si-name'>
-      <img className='si-badge-image' alt={`${getSIName(siClass)} icon`} src={SIImages[siClass]} />
+      <SIImage siClass={siClass} />
       <span>{getSIName(siClass)}</span>
       <span>({siClass})</span>
     </span>
   )
+}
+
+export function SIImage({ siClass, alt, className }: { siClass: keyof typeof SIImages; alt?: string; className?: string; }) {
+  return <img className={cx('si-badge-image', className)} alt={alt ?? `${getSIName(siClass)} icon`} src={SIImages[siClass]} />;
 }
